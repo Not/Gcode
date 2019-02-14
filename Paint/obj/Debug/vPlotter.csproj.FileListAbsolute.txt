@@ -1,0 +1,33 @@
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\bin\Debug\Paint.exe.config
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\bin\Debug\Paint.exe
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\bin\Debug\Paint.pdb
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\vPlotter.csprojResolveAssemblyReference.cache
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\Paint.Form2.resources
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\vPlotter.csproj.GenerateResource.Cache
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\vPlotter.csproj.CoreCompileInputs.cache
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\Paint.exe
+C:\Users\v\Desktop\Projekt Informatyka\Pliki_kod\Paint\obj\Debug\Paint.pdb
+C:\Users\c\Desktop\Pliki_kod\Paint\bin\Debug\Paint.exe.config
+C:\Users\c\Desktop\Pliki_kod\Paint\bin\Debug\Paint.exe
+C:\Users\c\Desktop\Pliki_kod\Paint\bin\Debug\Paint.pdb
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\vPlotter.csprojResolveAssemblyReference.cache
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\Paint.Form2.resources
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\vPlotter.csproj.GenerateResource.Cache
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\vPlotter.csproj.CoreCompileInputs.cache
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\Paint.exe
+C:\Users\c\Desktop\Pliki_kod\Paint\obj\Debug\Paint.pdb
+C:\Users\c\Desktop\Gcode\Paint\bin\Debug\Paint.exe.config
+C:\Users\c\Desktop\Gcode\Paint\bin\Debug\Paint.exe
+C:\Users\c\Desktop\Gcode\Paint\bin\Debug\Paint.pdb
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\vPlotter.csprojResolveAssemblyReference.cache
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\Paint.Form2.resources
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\vPlotter.csproj.GenerateResource.Cache
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\vPlotter.csproj.CoreCompileInputs.cache
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\Paint.exe
+C:\Users\c\Desktop\Gcode\Paint\obj\Debug\Paint.pdb

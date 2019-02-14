@@ -1,0 +1,63 @@
+C:\Users\v\source\repos\Paint\Paint\bin\Debug\Paint.exe.config
+C:\Users\v\source\repos\Paint\Paint\bin\Debug\Paint.exe
+C:\Users\v\source\repos\Paint\Paint\bin\Debug\Paint.pdb
+C:\Users\v\source\repos\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\v\source\repos\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\v\source\repos\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+C:\Users\v\source\repos\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\v\source\repos\Paint\Paint\obj\Debug\Paint.exe
+C:\Users\v\source\repos\Paint\Paint\obj\Debug\Paint.pdb
+C:\Users\v\source\repos\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\bin\Debug\Paint.exe.config
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\bin\Debug\Paint.exe
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\bin\Debug\Paint.pdb
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.Form1.resources
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.exe
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.pdb
+Z:\Kuba\Paint\Paint\bin\Debug\Paint.exe.config
+Z:\Kuba\Paint\Paint\bin\Debug\Paint.exe
+Z:\Kuba\Paint\Paint\bin\Debug\Paint.pdb
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.Form1.resources
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.exe
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.pdb
+C:\Users\v\Desktop\Paint\Paint\bin\Debug\Paint.exe.config
+C:\Users\v\Desktop\Paint\Paint\bin\Debug\Paint.exe
+C:\Users\v\Desktop\Paint\Paint\bin\Debug\Paint.pdb
+C:\Users\v\Desktop\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+C:\Users\v\Desktop\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\v\Desktop\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\v\Desktop\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+C:\Users\v\Desktop\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\v\Desktop\Paint\Paint\obj\Debug\Paint.exe
+C:\Users\v\Desktop\Paint\Paint\obj\Debug\Paint.pdb
+D:\Paint\Paint\bin\Debug\Paint.exe.config
+D:\Paint\Paint\bin\Debug\Paint.exe
+D:\Paint\Paint\bin\Debug\Paint.pdb
+D:\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+D:\Paint\Paint\obj\Debug\Paint.Form1.resources
+D:\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+D:\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+D:\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+D:\Paint\Paint\obj\Debug\Paint.exe
+D:\Paint\Paint\obj\Debug\Paint.pdb
+Z:\Kuba\Paint\Paint\obj\Debug\Paint.Form2.resources
+\\10.0.1.253\volume(sda1)\Kuba\Paint\Paint\obj\Debug\Paint.Form2.resources
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\bin\Debug\Paint.exe.config
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\bin\Debug\Paint.exe
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\bin\Debug\Paint.pdb
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.Form2.resources
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.exe
+C:\Users\v\Desktop\Projekt Informatyka\Paint\Paint\obj\Debug\Paint.pdb
