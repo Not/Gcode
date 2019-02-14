@@ -116,6 +116,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -614,7 +615,8 @@
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripButton3,
-            this.toolStripButton4});
+            this.toolStripButton4,
+            this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1227, 25);
@@ -728,14 +730,14 @@
             // połaczToolStripMenuItem
             // 
             this.połaczToolStripMenuItem.Name = "połaczToolStripMenuItem";
-            this.połaczToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.połaczToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.połaczToolStripMenuItem.Text = "Połacz";
             this.połaczToolStripMenuItem.Click += new System.EventHandler(this.połaczToolStripMenuItem_Click);
             // 
             // rozłaczToolStripMenuItem
             // 
             this.rozłaczToolStripMenuItem.Name = "rozłaczToolStripMenuItem";
-            this.rozłaczToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rozłaczToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.rozłaczToolStripMenuItem.Text = "Rozłacz";
             this.rozłaczToolStripMenuItem.Click += new System.EventHandler(this.rozłaczToolStripMenuItem_Click);
             // 
@@ -1036,6 +1038,15 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(78, 22);
+            this.toolStripButton5.Text = "Na Kubek";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1175,6 +1186,7 @@
         private System.Windows.Forms.TrackBar trackBar4;
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
     }
 }
 

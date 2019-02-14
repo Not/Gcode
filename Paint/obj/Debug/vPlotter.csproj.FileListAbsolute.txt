@@ -31,3 +31,15 @@ C:\Users\c\Desktop\Gcode\Paint\obj\Debug\vPlotter.csproj.GenerateResource.Cache
 C:\Users\c\Desktop\Gcode\Paint\obj\Debug\vPlotter.csproj.CoreCompileInputs.cache
 C:\Users\c\Desktop\Gcode\Paint\obj\Debug\Paint.exe
 C:\Users\c\Desktop\Gcode\Paint\obj\Debug\Paint.pdb
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\bin\Debug\Paint.exe.config
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\bin\Debug\Paint.exe
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\bin\Debug\Paint.pdb
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\vPlotter.csprojAssemblyReference.cache
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\Paint.Form2.resources
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\vPlotter.csproj.GenerateResource.cache
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\vPlotter.csproj.CoreCompileInputs.cache
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\Paint.exe
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\Paint.pdb
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\Paint.Form3.resources
+C:\Users\jakubko\Documents\GitHub\Gcode\Paint\obj\Debug\Paint.Form1.resources
