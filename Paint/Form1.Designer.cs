@@ -88,6 +88,7 @@
             this.połaczToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rozłaczToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -116,7 +117,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -369,6 +370,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.trackBar5);
             this.tabPage3.Controls.Add(this.trackBar4);
             this.tabPage3.Controls.Add(this.label14);
@@ -419,20 +421,21 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(5, 72);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 26);
+            this.label13.Size = new System.Drawing.Size(43, 26);
             this.label13.TabIndex = 3;
-            this.label13.Text = "Z Height\r\n20mm";
+            this.label13.Text = "Radius \r\n50mm";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // trackBar3
             // 
             this.trackBar3.BackColor = System.Drawing.Color.White;
             this.trackBar3.Location = new System.Drawing.Point(74, 72);
-            this.trackBar3.Maximum = 50;
-            this.trackBar3.Minimum = 10;
+            this.trackBar3.Maximum = 250;
+            this.trackBar3.Minimum = 50;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(108, 45);
             this.trackBar3.TabIndex = 2;
-            this.trackBar3.Value = 20;
+            this.trackBar3.Value = 50;
             this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
             // label12
@@ -750,6 +753,15 @@
             this.toolStripButton4.Text = "O Autorze";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(78, 22);
+            this.toolStripButton5.Text = "Na Kubek";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -1038,14 +1050,14 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
-            // toolStripButton5
+            // label15
             // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(78, 22);
-            this.toolStripButton5.Text = "Na Kubek";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 179);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 13);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "label15";
             // 
             // Form1
             // 
@@ -1187,6 +1199,7 @@
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.Label label15;
     }
 }
 

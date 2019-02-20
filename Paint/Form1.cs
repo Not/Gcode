@@ -461,7 +461,7 @@ namespace Paint
         private void button3_Click(object sender, EventArgs e) //konwertuj
         {
             rysuj();
-            przepiszDoListy();
+            przepiszDoListy2();
         }
 
         private void połaczToolStripMenuItem_Click(object sender, EventArgs e)
@@ -509,12 +509,15 @@ namespace Paint
                 MessageBox.Show("Najpierw podłącz urządzenie");
             }
             */
-            przepiszDoListy();
+
+            
+            przepiszDoListy2();
             saveFileDialog1.Filter = "pg files (*.pg)|*.pg";
             saveFileDialog1.ShowDialog();
             if (saveFileDialog1.FileName != "")
-            //File.WriteAllText(saveFileDialog1.FileName, (textBox4.Lines.Length-1).ToString()+"\r\n");
-            //File.AppendAllText(saveFileDialog1.FileName, trackBar5.Value.ToString() + "\r\n");
+                //File.WriteAllText(saveFileDialog1.FileName, (textBox4.Lines.Length-1).ToString()+"\r\n");
+                //File.AppendAllText(saveFileDialog1.FileName, trackBar5.Value.ToString() + "\r\n");
+                File.AppendAllText(saveFileDialog1.FileName, ".PROGRAM "+  Path.GetFileNameWithoutExtension(saveFileDialog1.FileName) + "()\n");
             File.AppendAllLines(saveFileDialog1.FileName, textBox4.Lines);
 
         }
@@ -780,7 +783,7 @@ namespace Paint
 
         private void label12_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -790,11 +793,11 @@ namespace Paint
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            label13.Text = "Z Height\n" + trackBar3.Value + " mm"; ;
+            label13.Text = "Radius\n" + trackBar3.Value + " mm"; ;
         }
         private void trackBar4_Scroll_1(object sender, EventArgs e)
         {
-            label12.Text = "Size\n" + (8600/(64-3.2*trackBar4.Value)).ToString("000")+"x" + (6400 / (64 - 3.2 * trackBar4.Value)).ToString("000")+" mm";
+            label12.Text = "Size\n" + (8600/(128-6.4*trackBar4.Value)).ToString("00")+"x" + (6400 / (128 - 6.4 * trackBar4.Value)).ToString("00")+" mm";
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e) //O autorze
@@ -810,14 +813,21 @@ namespace Paint
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            Form3 s2 = new Form3();
-            s2.ShowDialog();
+            //Form3 s2 = new Form3();
+            //s2.ShowDialog();
+
+
         }
 
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)//obsluga odbierania danych
         {
             string d = serialPort1.ReadExisting();
             BeginInvoke(new setString(setS), d);
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -870,11 +880,11 @@ namespace Paint
             float ax, ay, alx = 0, aly = 0;
                 bool rys=true;
             textBox4.Clear();
-            //textBox4.AppendText("(0," + (8600 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + "," + "0)\n");
-            //textBox4.AppendText("(" + (6400 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + "," + (8600 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + "," + "0)\n");
-            //textBox4.AppendText("(" + (6400 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + ",0,0)\n");
-            //textBox4.AppendText("(0,0,0)\n");
-            textBox4.AppendText(".PROGRAM output.pg()");
+            textBox4.AppendText("(0," + (8600 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + "," + "0)\n");
+            textBox4.AppendText("(" + (6400 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + "," + (8600 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + "," + "0)\n");
+            textBox4.AppendText("(" + (6400 / (64 - 3.2 * trackBar4.Value)).ToString(CultureInfo.InvariantCulture) + ",0,0)\n");
+            textBox4.AppendText("(0,0,0)\n");
+            //textBox4.AppendText(".PROGRAM output.pg()\n");
 
 
 
@@ -888,21 +898,24 @@ namespace Paint
                     ay = (float)(ay / (64 - 3.2 * trackBar4.Value));
                     if (textBox1.Lines[i][10] == '1' && !rys)
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + "0)\n"); //opuszczenie
+                         textBox4.AppendText("(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + "0)\n"); //opuszczenie
+                       // textBox4.AppendText(";opuszczam\n");
                         rys = true;
+
                     }
                     else if (textBox1.Lines[i][10] == '0' && rys)
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + trackBar3.Value+")\n"); //podniesienie
+                        textBox4.AppendText("(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + trackBar3.Value+")\n"); //podniesienie
                         rys = false;
+                       // textBox4.AppendText(";ponoszę\n");
                     }
                     if(rys)
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + ay.ToString(CultureInfo.InvariantCulture) + "," + ax.ToString(CultureInfo.InvariantCulture) + "," + "0)\n"); 
+                        textBox4.AppendText("(" + ay.ToString(CultureInfo.InvariantCulture) + "," + ax.ToString(CultureInfo.InvariantCulture) + "," + "0)\n"); 
                     }
                     else
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + ay.ToString(CultureInfo.InvariantCulture) + "," + ax.ToString(CultureInfo.InvariantCulture) + "," +trackBar3.Value + ")\n"); 
+                        textBox4.AppendText("(" + ay.ToString(CultureInfo.InvariantCulture) + "," + ax.ToString(CultureInfo.InvariantCulture) + "," +trackBar3.Value + ")\n"); 
                     }
                         alx = ax;
                     aly = ay;
@@ -910,7 +923,7 @@ namespace Paint
                    
                 }
             }
-            textBox4.AppendText(".END");
+           // textBox4.AppendText(".END");
 
 
         }
@@ -919,13 +932,41 @@ namespace Paint
 
             float ax, ay, alx = 0, aly = 0;
             bool rys = true;
-            int radius = 200;
-            int width = 500;
+            int radius = 45;
+            int width = 120;
+           // int radius = trackBar3.Value;
             textBox4.Clear();
             
-            textBox4.AppendText(".PROGRAM output.pg()");
+            
+            //textBox4.AppendText("point os=start+trans(0,0,"+radius+",0,0,0)\n");
+            //textBox4.AppendText("tool tool+trans(0,0," + radius + ",0,0,0)\n");
+            textBox4.AppendText("tool shifted\n");
+            #region ramka
 
+            ax = (float)((0/ 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
+            ay = (float)((width / 86) * 3200 / 100.0);
+            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
 
+            ax = (float)((0 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
+            ay = (float)((width / 86) * -3200 / 100.0);
+            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
+
+            ax = (float)((8600 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
+            ay = (float)((width / 86) * -3200 / 100.0);
+            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
+
+            ax = (float)((8600 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
+            ay = (float)((width / 86) * 3200 / 100.0);
+            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
+
+            ax = (float)((0 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
+            ay = (float)((width / 86) * 3200 / 100.0);
+            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
+
+            textBox4.AppendText("LMOVE os\n;koniec ramki\n");
+            
+
+            #endregion
 
             for (int i = 0; i < textBox1.Lines.Count() - 1; i++)
             {
@@ -935,25 +976,27 @@ namespace Paint
                     
                     ax = Int32.Parse(textBox1.Lines[i].Substring(0, 4));
                     ay = Int32.Parse(textBox1.Lines[i].Substring(5, 4));
-                    ax = (float)((ax - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
-                    ay = (float)((width/86)*ay);
+                    ax = (float)((ax/100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
+                    ay = (float)((width/86.0)*(ay-3200)/100.0);
                     if (textBox1.Lines[i][10] == '1' && !rys)
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + "0)\n"); //opuszczenie
+                        //textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + "0)\n"); //opuszczenie
                         rys = true;
+                        textBox4.AppendText(";opuszczam\n");
                     }
                     else if (textBox1.Lines[i][10] == '0' && rys)
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + trackBar3.Value + ")\n"); //podniesienie
+                       // textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + trackBar3.Value + ")\n"); //podniesienie
                         rys = false;
+                        textBox4.AppendText(";podnoszę\n");
                     }
                     if (rys)
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + ay.ToString(CultureInfo.InvariantCulture) + "," + ax.ToString(CultureInfo.InvariantCulture) + "," + "0)\n");
+                        textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
                     }
                     else
                     {
-                        textBox4.AppendText("LMOVE START+TRANS(" + ay.ToString(CultureInfo.InvariantCulture) + "," + ax.ToString(CultureInfo.InvariantCulture) + "," + trackBar3.Value + ")\n");
+                        textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
                     }
                     alx = ax;
                     aly = ay;
@@ -961,7 +1004,10 @@ namespace Paint
 
                 }
             }
-            textBox4.AppendText(".END");
+            //textBox4.AppendText("tool tool+trans(0,0," + -radius + ",0,0,0)\n");
+            textBox4.AppendText("tool normal\n");
+
+            textBox4.AppendText(".END\n");
 
 
         }
