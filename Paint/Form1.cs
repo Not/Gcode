@@ -861,9 +861,10 @@ namespace Paint
                     ay = Int32.Parse(textBox1.Lines[i].Substring(5, 4));
                     if (textBox1.Lines[i][10] == '1')
                         g.DrawLine(new Pen(Color.Black, 1), alx / 10, aly / 10, ax / 10, ay / 10);
+                    g.DrawEllipse(new Pen(Color.Red, 2), ax / 10 -4, ay / 10 -4, 8, 8);
                     alx = ax;
                     aly = ay;
-                   // Thread.Sleep(3);
+                    Thread.Sleep(6);
                     progressBar1.Value = 100 * i / (textBox1.Lines.Count() - 2);
                     progressBar1.Refresh();
                 }
@@ -932,15 +933,17 @@ namespace Paint
 
             float ax, ay, alx = 0, aly = 0;
             bool rys = true;
-            int radius = 45;
-            int width = 120;
+            float radius = 37.5F;
+            int width = 100;
            // int radius = trackBar3.Value;
             textBox4.Clear();
-            
-            
+
+
             //textBox4.AppendText("point os=start+trans(0,0,"+radius+",0,0,0)\n");
             //textBox4.AppendText("tool tool+trans(0,0," + radius + ",0,0,0)\n");
-            textBox4.AppendText("tool shifted\n");
+            ;//
+            //textBox4.AppendText("SET_ARC_WELDMODE=3\n");
+            textBox4.AppendText("tool to1_shift\n");
             #region ramka
 
             ax = (float)((0/ 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
@@ -992,11 +995,15 @@ namespace Paint
                     }
                     if (rys)
                     {
-                        textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
+                       // textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,-30,0)\n");
+                        textBox4.AppendText("LAS os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,0,0),1\n");
+
                     }
                     else
                     {
-                        textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
+                       // textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,-30,0)\n");
+                        textBox4.AppendText("LAS os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,0,0),1\n");
+
                     }
                     alx = ax;
                     aly = ay;
@@ -1005,7 +1012,7 @@ namespace Paint
                 }
             }
             //textBox4.AppendText("tool tool+trans(0,0," + -radius + ",0,0,0)\n");
-            textBox4.AppendText("tool normal\n");
+            textBox4.AppendText("tool to1\n");
 
             textBox4.AppendText(".END\n");
 
