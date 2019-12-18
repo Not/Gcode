@@ -367,6 +367,7 @@ namespace Paint
             textBox3.Clear();
             textBox4.Clear();
             progressBar1.Value = 0;
+            g.DrawLine(new Pen(Color.ForestGreen, 1), 430, 0, 430, 640);
 
         }
         public enum narzedzie
@@ -830,6 +831,16 @@ namespace Paint
 
         }
 
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            g.DrawLine(new Pen(Color.Black, 1), 3200, 0, 3200, 6400);
+        }
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
             if (serialPort1.IsOpen)
@@ -852,6 +863,7 @@ namespace Paint
         private void rysuj() //przerysowanie zawartości okna kodu
         {
             g.Clear(Color.White);
+            g.DrawLine(new Pen(Color.ForestGreen, 1), 430, 0, 430, 640);
             int ax, ay, alx=20, aly=20;
             label9.Text = "Konwertowanie";
             for (int i = 0; i < textBox1.Lines.Count()-1; i++)
@@ -859,14 +871,18 @@ namespace Paint
                 {
                     ax = Int32.Parse(textBox1.Lines[i].Substring(0, 4));
                     ay = Int32.Parse(textBox1.Lines[i].Substring(5, 4));
-                    if (textBox1.Lines[i][10] == '1')
-                        g.DrawLine(new Pen(Color.Black, 1), alx / 10, aly / 10, ax / 10, ay / 10);
-                    g.DrawEllipse(new Pen(Color.Red, 2), ax / 10 -4, ay / 10 -4, 8, 8);
-                    alx = ax;
-                    aly = ay;
-                    Thread.Sleep(6);
-                    progressBar1.Value = 100 * i / (textBox1.Lines.Count() - 2);
-                    progressBar1.Refresh();
+                    if (ax < 4300)
+                    {
+                        if (textBox1.Lines[i][10] == '1')
+                            //g.DrawLine(new Pen(Color.Black, 1), alx / 10, aly / 10, ax / 10, ay / 10);
+                        g.DrawEllipse(new Pen(Color.ForestGreen, 2), ax / 10 - 4, ay / 10 - 4, 8, 8);
+                        g.DrawEllipse(new Pen(Color.ForestGreen, 2), (8600-ax) / 10 - 4, ay / 10 - 4, 8, 8);
+                        alx = ax;
+                        aly = ay;
+                        Thread.Sleep(6);
+                        progressBar1.Value = 100 * i / (textBox1.Lines.Count() - 2);
+                        progressBar1.Refresh();
+                    }
                 }
             }
             label9.Text = " ";
@@ -931,7 +947,7 @@ namespace Paint
         private void przepiszDoListy2()
         {
 
-            float ax, ay, alx = 0, aly = 0;
+            float ax, ay, alx = 0, aly = 0,angle=0;
             bool rys = true;
             float radius = 37.5F;
             int width = 100;
@@ -939,37 +955,6 @@ namespace Paint
             textBox4.Clear();
 
 
-            //textBox4.AppendText("point os=start+trans(0,0,"+radius+",0,0,0)\n");
-            //textBox4.AppendText("tool tool+trans(0,0," + radius + ",0,0,0)\n");
-            ;//
-            //textBox4.AppendText("SET_ARC_WELDMODE=3\n");
-            textBox4.AppendText("tool to1_shift\n");
-            #region ramka
-
-            ax = (float)((0/ 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
-            ay = (float)((width / 86) * 3200 / 100.0);
-            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
-
-            ax = (float)((0 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
-            ay = (float)((width / 86) * -3200 / 100.0);
-            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
-
-            ax = (float)((8600 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
-            ay = (float)((width / 86) * -3200 / 100.0);
-            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
-
-            ax = (float)((8600 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
-            ay = (float)((width / 86) * 3200 / 100.0);
-            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
-
-            ax = (float)((0 / 100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
-            ay = (float)((width / 86) * 3200 / 100.0);
-            textBox4.AppendText(";LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0)\n");
-
-            textBox4.AppendText("LMOVE os\n;koniec ramki\n");
-            
-
-            #endregion
 
             for (int i = 0; i < textBox1.Lines.Count() - 1; i++)
             {
@@ -979,33 +964,14 @@ namespace Paint
                     
                     ax = Int32.Parse(textBox1.Lines[i].Substring(0, 4));
                     ay = Int32.Parse(textBox1.Lines[i].Substring(5, 4));
-                    ax = (float)((ax/100.0 - 43) * 360 * width / (86 * 2 * 3.1415 * radius));
-                    ay = (float)((width/86.0)*(ay-3200)/100.0);
-                    if (textBox1.Lines[i][10] == '1' && !rys)
-                    {
-                        //textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + "0)\n"); //opuszczenie
-                        rys = true;
-                        textBox4.AppendText(";opuszczam\n");
-                    }
-                    else if (textBox1.Lines[i][10] == '0' && rys)
-                    {
-                       // textBox4.AppendText("LMOVE START+TRANS(" + aly.ToString(CultureInfo.InvariantCulture) + "," + alx.ToString(CultureInfo.InvariantCulture) + "," + trackBar3.Value + ")\n"); //podniesienie
-                        rys = false;
-                        textBox4.AppendText(";podnoszę\n");
-                    }
-                    if (rys)
-                    {
+                   
+                    angle = (float)Math.Atan2((ax - alx) , (ay - aly));
+                   
                        // textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,-30,0)\n");
-                        textBox4.AppendText("LAS os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,0,0),1\n");
-
-                    }
-                    else
-                    {
-                       // textBox4.AppendText("LMOVE os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,-30,0)\n");
-                        textBox4.AppendText("LAS os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,0,0),1\n");
-
-                    }
-                    alx = ax;
+                       // textBox4.AppendText("LAS os+TRANS(0," + ay.ToString(CultureInfo.InvariantCulture) + ",0,0," + ax.ToString(CultureInfo.InvariantCulture) + ",0,0,0),1\n");
+                    textBox4.AppendText("CIRCLE(" + (4300 - ax).ToString(CultureInfo.InvariantCulture) + ","+angle.ToString(CultureInfo.InvariantCulture)+"\r\n");
+                   
+                   alx = ax;
                     aly = ay;
 
 
