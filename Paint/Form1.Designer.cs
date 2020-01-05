@@ -50,6 +50,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
             this.trackBar5 = new System.Windows.Forms.TrackBar();
             this.trackBar4 = new System.Windows.Forms.TrackBar();
             this.label14 = new System.Windows.Forms.Label();
@@ -88,7 +89,6 @@
             this.połaczToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rozłaczToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -117,7 +117,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button22 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -150,7 +151,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(1014, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 640);
+            this.panel1.Size = new System.Drawing.Size(213, 645);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -383,6 +384,15 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Ustawienia";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 179);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 13);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "label15";
             // 
             // trackBar5
             // 
@@ -618,8 +628,7 @@
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton5});
+            this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1227, 25);
@@ -642,28 +651,28 @@
             // zapiszBitmapęToolStripMenuItem
             // 
             this.zapiszBitmapęToolStripMenuItem.Name = "zapiszBitmapęToolStripMenuItem";
-            this.zapiszBitmapęToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.zapiszBitmapęToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zapiszBitmapęToolStripMenuItem.Text = "Zapisz bitmapę";
             this.zapiszBitmapęToolStripMenuItem.Click += new System.EventHandler(this.zapiszBitmapęToolStripMenuItem_Click);
             // 
             // zapiszKodToolStripMenuItem
             // 
             this.zapiszKodToolStripMenuItem.Name = "zapiszKodToolStripMenuItem";
-            this.zapiszKodToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.zapiszKodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zapiszKodToolStripMenuItem.Text = "Zapisz kod";
             this.zapiszKodToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
             // 
             // wczytajKodToolStripMenuItem
             // 
             this.wczytajKodToolStripMenuItem.Name = "wczytajKodToolStripMenuItem";
-            this.wczytajKodToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.wczytajKodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wczytajKodToolStripMenuItem.Text = "Wczytaj kod";
             this.wczytajKodToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
             // wyczyśćToolStripMenuItem
             // 
             this.wyczyśćToolStripMenuItem.Name = "wyczyśćToolStripMenuItem";
-            this.wyczyśćToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.wyczyśćToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wyczyśćToolStripMenuItem.Text = "Wyczyść";
             this.wyczyśćToolStripMenuItem.Click += new System.EventHandler(this.button16_Click);
             // 
@@ -726,21 +735,21 @@
             this.toolStripButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(68, 22);
-            this.toolStripButton3.Text = "Robot";
+            this.toolStripButton3.Size = new System.Drawing.Size(66, 22);
+            this.toolStripButton3.Text = "CDPR";
             this.toolStripButton3.ToolTipText = "Robot";
             // 
             // połaczToolStripMenuItem
             // 
             this.połaczToolStripMenuItem.Name = "połaczToolStripMenuItem";
-            this.połaczToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.połaczToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.połaczToolStripMenuItem.Text = "Połacz";
             this.połaczToolStripMenuItem.Click += new System.EventHandler(this.połaczToolStripMenuItem_Click);
             // 
             // rozłaczToolStripMenuItem
             // 
             this.rozłaczToolStripMenuItem.Name = "rozłaczToolStripMenuItem";
-            this.rozłaczToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.rozłaczToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rozłaczToolStripMenuItem.Text = "Rozłacz";
             this.rozłaczToolStripMenuItem.Click += new System.EventHandler(this.rozłaczToolStripMenuItem_Click);
             // 
@@ -753,15 +762,6 @@
             this.toolStripButton4.Text = "O Autorze";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(78, 22);
-            this.toolStripButton5.Text = "Na Kubek";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -771,7 +771,7 @@
             this.panel2.Controls.Add(this.groupBox4);
             this.panel2.Location = new System.Drawing.Point(1, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 640);
+            this.panel2.Size = new System.Drawing.Size(148, 645);
             this.panel2.TabIndex = 2;
             // 
             // groupBox3
@@ -1041,29 +1041,41 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(148, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(150, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(860, 640);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
-            // label15
+            // textBox5
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(7, 179);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "label15";
+            this.textBox5.Location = new System.Drawing.Point(2, 674);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(1138, 20);
+            this.textBox5.TabIndex = 4;
+            this.textBox5.Text = ">";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(1146, 672);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(75, 23);
+            this.button22.TabIndex = 5;
+            this.button22.Text = "wyślij";
+            this.button22.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 662);
+            this.ClientSize = new System.Drawing.Size(1227, 701);
+            this.Controls.Add(this.button22);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
@@ -1073,7 +1085,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Program";
+            this.Text = "CDPR Draw";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1198,8 +1211,9 @@
         private System.Windows.Forms.TrackBar trackBar4;
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button22;
     }
 }
 

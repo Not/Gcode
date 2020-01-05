@@ -485,11 +485,11 @@ namespace Paint
 
         private void button17_Click(object sender, EventArgs e)  //rysuj ploterem
         {
-            /*
+            
             int i = 0;
             if (serialPort1.IsOpen)
             {
-                serialPort1.Write("u"); //wyslij
+                serialPort1.Write("M28 \"file.gcode\""); //wyslij
                 label9.Text = "Wysyłanie";
                 Thread.Sleep(500);
                 while (i < textBox1.Lines.Length - 1)
@@ -508,7 +508,7 @@ namespace Paint
             {
                 MessageBox.Show("Najpierw podłącz urządzenie");
             }
-            */
+            
 
             
             przepiszDoListy2();
@@ -605,9 +605,10 @@ namespace Paint
 
             if (serialPort1.IsOpen)
             {
-                serialPort1.Write(">");
+               
                 v += 5;
-                
+                serialPort1.Write("G1 F"+v.ToString());
+
             }
             label10.Text = "v=" + v + " mm/s";
 
@@ -631,7 +632,7 @@ namespace Paint
         {
             if (serialPort1.IsOpen)
             {
-                serialPort1.Write("a");
+                serialPort1.Write("G92 X-50\r\n");
             }
         }
         private void button7_Click(object sender, EventArgs e)//prawo
@@ -830,6 +831,21 @@ namespace Paint
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
             if (serialPort1.IsOpen)
@@ -861,7 +877,7 @@ namespace Paint
                     ay = Int32.Parse(textBox1.Lines[i].Substring(5, 4));
                     if (textBox1.Lines[i][10] == '1')
                         g.DrawLine(new Pen(Color.Black, 1), alx / 10, aly / 10, ax / 10, ay / 10);
-                    g.DrawEllipse(new Pen(Color.Red, 2), ax / 10 -4, ay / 10 -4, 8, 8);
+                    //g.DrawEllipse(new Pen(Color.Red, 2), ax / 10 -4, ay / 10 -4, 8, 8);
                     alx = ax;
                     aly = ay;
                     Thread.Sleep(6);
