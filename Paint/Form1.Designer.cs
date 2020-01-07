@@ -60,9 +60,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Pseudokod = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pKodBox = new System.Windows.Forms.TextBox();
             this.GCODE = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.gcodeBox = new System.Windows.Forms.TextBox();
             this.Lista = new System.Windows.Forms.TabPage();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -104,13 +104,13 @@
             this.button9 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCzcionka = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.parametr2 = new System.Windows.Forms.TrackBar();
+            this.textInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.parametr1 = new System.Windows.Forms.TrackBar();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
@@ -138,8 +138,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parametr2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parametr1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,7 +165,7 @@
             this.tabControl1.Size = new System.Drawing.Size(204, 264);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.TabStop = false;
-            this.tabControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabControl1_KeyDown);
+           
             // 
             // tabPage1
             // 
@@ -456,7 +456,7 @@
             this.label12.Size = new System.Drawing.Size(67, 26);
             this.label12.TabIndex = 1;
             this.label12.Text = "Size\r\n168x125 mm";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            
             // 
             // groupBox1
             // 
@@ -488,7 +488,7 @@
             // 
             // Pseudokod
             // 
-            this.Pseudokod.Controls.Add(this.textBox1);
+            this.Pseudokod.Controls.Add(this.pKodBox);
             this.Pseudokod.Location = new System.Drawing.Point(4, 22);
             this.Pseudokod.Name = "Pseudokod";
             this.Pseudokod.Padding = new System.Windows.Forms.Padding(3);
@@ -497,17 +497,17 @@
             this.Pseudokod.Text = "\"pKod\"";
             this.Pseudokod.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // pKodBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 116);
-            this.textBox1.TabIndex = 0;
+            this.pKodBox.Location = new System.Drawing.Point(6, 3);
+            this.pKodBox.Multiline = true;
+            this.pKodBox.Name = "pKodBox";
+            this.pKodBox.Size = new System.Drawing.Size(177, 116);
+            this.pKodBox.TabIndex = 0;
             // 
             // GCODE
             // 
-            this.GCODE.Controls.Add(this.textBox3);
+            this.GCODE.Controls.Add(this.gcodeBox);
             this.GCODE.Location = new System.Drawing.Point(4, 22);
             this.GCODE.Name = "GCODE";
             this.GCODE.Padding = new System.Windows.Forms.Padding(3);
@@ -516,13 +516,13 @@
             this.GCODE.Text = "GCODE";
             this.GCODE.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // gcodeBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(8, 6);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 113);
-            this.textBox3.TabIndex = 2;
+            this.gcodeBox.Location = new System.Drawing.Point(8, 6);
+            this.gcodeBox.Multiline = true;
+            this.gcodeBox.Name = "gcodeBox";
+            this.gcodeBox.Size = new System.Drawing.Size(182, 113);
+            this.gcodeBox.TabIndex = 2;
             // 
             // Lista
             // 
@@ -570,7 +570,7 @@
             this.button17.TabStop = false;
             this.button17.Text = "wgraj (COM)";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.Click += new System.EventHandler(this.wgraj_Click);
             // 
             // progressBar1
             // 
@@ -592,7 +592,7 @@
             this.button3.TabStop = false;
             this.button3.Text = "przerysuj";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.konwertuj_Click);
             // 
             // button2
             // 
@@ -603,7 +603,7 @@
             this.button2.TabStop = false;
             this.button2.Text = "zapisz";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.zapisz_Click);
             // 
             // button1
             // 
@@ -614,7 +614,7 @@
             this.button1.TabStop = false;
             this.button1.Text = "wczytaj";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.wczytaj_Click);
             // 
             // serialPort1
             // 
@@ -660,14 +660,14 @@
             this.zapiszKodToolStripMenuItem.Name = "zapiszKodToolStripMenuItem";
             this.zapiszKodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zapiszKodToolStripMenuItem.Text = "Zapisz kod";
-            this.zapiszKodToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
+            this.zapiszKodToolStripMenuItem.Click += new System.EventHandler(this.zapisz_Click);
             // 
             // wczytajKodToolStripMenuItem
             // 
             this.wczytajKodToolStripMenuItem.Name = "wczytajKodToolStripMenuItem";
             this.wczytajKodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wczytajKodToolStripMenuItem.Text = "Wczytaj kod";
-            this.wczytajKodToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
+            this.wczytajKodToolStripMenuItem.Click += new System.EventHandler(this.wczytaj_Click);
             // 
             // wyczyśćToolStripMenuItem
             // 
@@ -919,13 +919,13 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.checkBox1);
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.comboBoxCzcionka);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.trackBar2);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.parametr2);
+            this.groupBox4.Controls.Add(this.textInput);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.trackBar1);
+            this.groupBox4.Controls.Add(this.parametr1);
             this.groupBox4.Location = new System.Drawing.Point(3, 432);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(138, 201);
@@ -945,21 +945,21 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.Visible = false;
             // 
-            // comboBox1
+            // comboBoxCzcionka
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxCzcionka.FormattingEnabled = true;
+            this.comboBoxCzcionka.Items.AddRange(new object[] {
             "Sans 1",
             "Sans Bold",
             "Script"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 149);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.TabStop = false;
-            this.comboBox1.Text = "Sans 1";
-            this.comboBox1.Visible = false;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxCzcionka.Location = new System.Drawing.Point(12, 149);
+            this.comboBoxCzcionka.Name = "comboBoxCzcionka";
+            this.comboBoxCzcionka.Size = new System.Drawing.Size(115, 21);
+            this.comboBoxCzcionka.TabIndex = 6;
+            this.comboBoxCzcionka.TabStop = false;
+            this.comboBoxCzcionka.Text = "Sans 1";
+            this.comboBoxCzcionka.Visible = false;
+      
             // 
             // label7
             // 
@@ -980,23 +980,23 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Dokładność";
             // 
-            // trackBar2
+            // parametr2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(12, 69);
-            this.trackBar2.Minimum = 1;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(119, 45);
-            this.trackBar2.TabIndex = 3;
-            this.trackBar2.Value = 5;
+            this.parametr2.Location = new System.Drawing.Point(12, 69);
+            this.parametr2.Minimum = 1;
+            this.parametr2.Name = "parametr2";
+            this.parametr2.Size = new System.Drawing.Size(119, 45);
+            this.parametr2.TabIndex = 3;
+            this.parametr2.Value = 5;
             // 
-            // textBox2
+            // textInput
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 20);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Visible = false;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textInput.Location = new System.Drawing.Point(12, 123);
+            this.textInput.Name = "textInput";
+            this.textInput.Size = new System.Drawing.Size(115, 20);
+            this.textInput.TabIndex = 2;
+            this.textInput.Visible = false;
+            this.textInput.TextChanged += new System.EventHandler(this.textInput_TextChanged);
             // 
             // label5
             // 
@@ -1007,14 +1007,14 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Grubość";
             // 
-            // trackBar1
+            // parametr1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(11, 30);
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(125, 45);
-            this.trackBar1.TabIndex = 0;
-            this.trackBar1.Value = 1;
+            this.parametr1.Location = new System.Drawing.Point(11, 30);
+            this.parametr1.Minimum = 1;
+            this.parametr1.Name = "parametr1";
+            this.parametr1.Size = new System.Drawing.Size(125, 45);
+            this.parametr1.TabIndex = 0;
+            this.parametr1.Value = 1;
             // 
             // openFileDialog1
             // 
@@ -1115,8 +1115,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parametr2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parametr1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1136,7 +1136,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pKodBox;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
@@ -1179,11 +1179,11 @@
         private System.Windows.Forms.ToolStripMenuItem połaczToolStripMenuItem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TrackBar parametr2;
+        private System.Windows.Forms.TextBox textInput;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TrackBar parametr1;
+        private System.Windows.Forms.ComboBox comboBoxCzcionka;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Timer timer1;
@@ -1206,7 +1206,7 @@
         private System.Windows.Forms.TabPage Pseudokod;
         private System.Windows.Forms.TabPage GCODE;
         private System.Windows.Forms.TabPage Lista;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox gcodeBox;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TrackBar trackBar4;
         private System.Windows.Forms.TrackBar trackBar5;
